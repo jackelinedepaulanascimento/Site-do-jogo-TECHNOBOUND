@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./ic.png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoBound</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #190D2B;
+        background-image: url("fundo.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1;
+        text-align: center;
+        padding: 15px 20px;
+
+        background-color: #190D2B;
+        color: #FFD36A;
+
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+
+        border: 2px solid #C94B16;
+        border-radius: 10px;
+
+
+    }
+
+
+    nav a:hover {
+        background-color: #C94B16;
+        color: #FFD36A;
+        border-color: #FFD36A;
+
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px #F06B2444;
+    }
+
+
+
+    a {
+        color: #C94B16;
+        padding: 15px;
+        bottom: unset;
+    }
+
+    header {
+        font-family: 'Bungee', sans-serif;
+        color: #FFD36A;
+        text-align: center;
+        text-shadow: 4px 5px 0 #190D2B;
+        margin: 0;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+        font-size: clamp(3rem, 8vw, 6rem);
+    }
+
+    header h2 {
+        margin-bottom: -20;
+        font-size: clamp(1, 5rem, 4vw, 3rem);
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    section {
+        nav-left: auto;
+        margin-top: 50px;
+        text-align: center;
+        padding: 15px 20px;
+        background-color: #190D2B;
+        color: wheat;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        border: 2px solid #C94B16;
+        border-radius: 10px;
+        box-sizing: border-box;
+        min-width: 0;
+
+    }
+
+    section h2 {
+        text-align: center;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        color: #FFD36A;
+
+    }
+
+    .titulo-desen {
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .desenvolvedores {
+        margin-top: 50px;
+        text-align: center;
+        padding: 20px;
+        background-color: #190D2B;
+        color: wheat;
+        border: 2px solid #C94B16;
+        border-radius: 10px;
+    }
+
+    .desenvolvedores .card {
+        flex: 1 1 150px;
+        max-width: 220px;
+    }
+
+
+    .desenvolvedores .unico {
+        background-color: #190D2B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1 1 150px;
+        max-width: 180px;
+        margin: 0;
+        padding: 20px;
+        gap: 10px;
+        text-align: center;
+        color: wheat;
+        border: 2px solid #C94B16;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .desenvolvedores .unico>h2 {
+        color: wheat;
+    }
+
+    .desenvolvedores {
+        background: transparent;
+        text-align: justify;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+
+    .desenvolvedores>h2 {
+        flex-basis: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .desenvolvedores>ul {
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+    .desenvolvedores.unico h2,
+    .desenvolvedores.unico h3 {
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+        display: contents;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+        color: wheat;
+    }
+
+    li {
+        text-align: center;
+        list-style: none;
+    }
+
+    .org-box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .org-box>section:not(.carrossel) {
+        box-sizing: border-box;
+        height: 100%;
+        margin-top: 50px;
+    }
+
+    .org-box section {
+        flex: 1;
+        min-width: 250px;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .doc a {
+        color: wheat;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .carrossel {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin: 120px auto 60px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        box-sizing: border-box;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .janela {
+        position: relative;
+        background: transparent;
+        overflow: hidden;
+        border: 3px solid #D9A441;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #8A3DB5;
+        box-sizing: border-box;
+        width: 70%;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    .slides {
+        display: grid;
+    }
+
+    .slides img {
+        grid-area: 1 / 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        object-fit: contain;
+    }
+
+    .slides img.ativa {
+        opacity: 1;
+    }
+
+    .seta {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: #301447;
+        color: #D9A441;
+        font-size: clamp(16px, 3vw, 24px);
+        cursor: pointer;
+        padding: 8px 12px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seta:hover {
+        background: #D9A441;
+        color: #301447;
+    }
+
+    .anterior {
+        left: 12px;
+    }
+
+    .proxima {
+        right: 12px;
+    }
+
+    .bolinhas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        width: 100%
+    }
+
+    .bolinha {
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background: #2b1152;
+        cursor: pointer;
+        flex: 0 0 12px;
+    }
+
+    .bolinha.ativa {
+        background: #D9A441;
+        transform: scale(1.3);
+    }
+
+    .org-box .carrossel {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    @media (max-width: 600px) {
+
+        .janela {
+            border-width: 2px;
+            border-radius: 10px;
+        }
+
+        .seta {
+            padding: 6px 9px;
+            font-size: 16px;
+        }
+
+        .anterior {
+            left: 5px;
+        }
+
+        .proxima {
+            right: 5px;
+        }
+
+        .bolinhas {
+            gap: 10px;
+            bottom: -30px;
+        }
+
+        .bolinha {
+            width: 10px;
+            height: 10px;
+            flex-basis: 10px;
+        }
+
+        .org-box {
+            grid-template-columns: 1fr;
+        }
+
+        .org-box .carrossel {
+            grid-column: 1/-1;
+            justify-self: center;
+        }
+    }
+
+    .bxr {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rodape {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+    }
+
+    .rodape .caixa-fim {
+        flex: 1 1 250px;
+        min-width: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .rodape .caixa-fim h2 {
+        margin-bottom: 20px;
+    }
+
+    .rodape .links-fim {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .rodape .links-fim a {
+        flex: 1 1 140px;
+        text-align: center;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 600px) {
+        .rodape {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .fim {
+        background: transparent;
+        margin-top: 50px;
+        min-width: 0;
+
+    }
+
+    .fim h2 {
+        margin-bottom: 15px;
+    }
+
+    .trailer .janela {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        padding: 0;
+        border: 3px solid #D9A441;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #8A3DB5;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .trailer .janela video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .trailer {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .boss {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1 1 120px;
+        max-width: 180px;
+        min-width: 0;
+    }
+
+    .boss img {
+        height: auto;
+        width: 100%;
+        max-width: 120px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    .boss h3 {
+        margin: 10px 0 0;
+        color: #FFD36A;
+        overflow-wrap: anywhere;
+    }
+
+    .mãe {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .avatar img {
+        height: auto;
+        width: 100%;
+        max-width: 120px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    .blz {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        grid-column: 1 / -1;
+        margin-top: 0;
+        padding: 20px;
+        align-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blz>h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: -20px;
+        margin-top: 10px;
+    }
+    .cod {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 10px;
+        row-gap: 10px;
+        width: 90%;
+        max-width: 1400px;
+        margin: 20px auto;
+        align-items: start;
+    }
+    
+    .cod div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .cod img {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1>Technobound</h1>
+        <h2>A caverna tecnológica</h2>
+    </header>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#obj">Objetivo</a>
+        <a href="#cen">Cenários</a>
+        <a href="#boss">Boss</a>
+        <a href="#avatar">Avatar</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#código">Código</a>
+        <a href="#down">Download</a>
+        <a href="#doc">Documentação</a>
+        <a href="#desen">Desenvolvedores</a>
+    </nav>
+    <div class="org-box">
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>
+                Embarque em uma aventura subterrânea onde cada minério pode se tornar uma peça fundamental para
+                construir o
+                futuro
+                da tecnologia!
+
+                Explore uma caverna misteriosa dividida em diferentes fases, colete recursos e descubra os materiais
+                necessários para a formação de componentes de hardware.
+
+                A cada etapa, novos desafios, minérios e possibilidades esperam por você.
+
+        </section>
+        <section id="obj">
+            <h2>Objetivo</h2>
+            <p>
+                O seu objetivo dentro da caverna Technobound, será minerar tudo o que for necessáriospara a formação da
+                melhor peça de hardware que você conseguir entregar. Tenho certeza que com a dedicação necessária o seu
+                setup será o melhor!
+
+        </section>
+    </div>
+    <br>
+    <section>
+        <section class="carrossel" id="cen">
+            <h2>Cenários</h2>
+            <div class="janela">
+                <div class="slides" id="slides">
+                    <img src="img1.jpeg">
+                    <img src="img2.jpeg">
+                    <img src="img3.jpeg">
+                    <img src="img4.jpeg">
+                    <img src="img5.jpeg">
+                    <img src="img6.jpeg">
+                </div>
+                <button class="seta anterior" onclick="mudarSlide(-1)" aria-label="Imagem anterior">
+                    < </button>
+                        <button class="seta proxima" onclick="mudarSlide(1)" aria-label="Próxima imagem">
+                            >
+                        </button>
+            </div>
+            <div class="bolinhas">
+                <button class="bolinha ativa" onclick="irParaSlide(0)" aria-label="img1"></button>
+                <button class="bolinha" onclick="irParaSlide(1)" aria-label="img2"></button>
+                <button class="bolinha" onclick="irParaSlide(2)" aria-label="img3"></button>
+                <button class="bolinha" onclick="irParaSlide(3)" aria-label="img4"></button>
+                <button class="bolinha" onclick="irParaSlide(4)" aria-label="img5"></button>
+                <button class="bolinha" onclick="irParaSlide(5)" aria-label="img6"></button>
+
+            </div>
+        </section>
+        <h3>Divididos por biomas e níveis de dificudade, estão aqui alguns dos cenários que você
+            encontrará nessa aventura.</h3>
+
+    </section>
+    </div>
+
+    <div class="org-box">
+        <section id="boss">
+            <h2>Bosses</h2>
+            <section>
+                <div class="mãe">
+
+                    <div class="boss">
+                        <img src="img1.png">
+                        <div>Pyrovskite</div>
+                    </div>
+                    <div class="boss">
+                        <img src="img2.png">
+                        <div>Nickentree</div>
+                    </div>
+                    <div class="boss">
+                        <img src="img3.png">
+                        <div>Neodemon</div>
+                    </div>
+                </div>
+            </section>
+            <p>Esses são alguns dos monstros que você irá enfrentar. E então, será que você consegue?</p>
+        </section>
+
+        <section id="avatar">
+            <h2>Avatar</h2>
+            <section class="avatar">
+                <img src="avatar.png">
+                <div class="mãe">Ada Lovelace</div>
+            </section>
+            <p>Essa é a Ada, o avatar que te vai te representar durante a sua jornada dentro da caverna TechnoBound.
+            </p>
+        </section>
+
+        <section class="blz" id="trailer">
+            <h2>Trailer</h2>
+            <section class="trailer">
+                <div class="janela">
+                    <video controls>
+                        <source src="#" type="video/mp4">
+                        Seu navegador não consegue reproduzir este vídeo.
+                    </video>
+                </div>
+                <p>Dê play e assista á um pequeno trailer de como as coisas funcionam dentro da caverna TechnoBound.</p>
+            </section>
+        </section>
+
+        <section class="carrossel" id="cen">
+            <style>
+                section {
+                    background: transparent;
+                }
+            </style>
+            <section id="código">
+                <h2>Trechos do código</h2>
+            <div class="cod">
+                <div>
+                    <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
+                </div>
+            
+                <div>
+                    <img src="cod2.jpeg" alt="Trecho de código 2" title="Nickentree">
+                </div>
+            
+                <div>
+                    <img src="cod3.jpeg" alt="Trecho de código 3" title="Inventario">
+                </div>
+            
+                <div>
+                    <img src="cod4.jpeg" alt="Trecho de código 4" title="Caixa de receitas">
+                </div>
+            </div>
+                <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.</p>
+            </section>
+            <div class="rodape">
+                <section id="doc" class="fim">
+                    <h2>Documentação</h2>
+
+                    <nav class="bxr">
+                        <a href="DOCUMENTACAOOFICIALDOJOGO.odt">Baixar Documentação</a>
+                    </nav>
+                </section>
+                <section id="down" class="caixa-fim">
+
+                    <h2>Download</h2>
+
+                    <nav class="links-fim">
+
+                        <a href="DOCUMENTACAOOFICIALDOJOGO.odt">Baixar para Windows</a>
+                        <a href="DOCUMENTACAOOFICIALDOJOGO.odt">Baixar para Linux</a>
+
+                    </nav>
+                </section>
+            </div>
+
+            <section class="desenvolvedores" id="desen">
+                <style>
+                    h2 a {
+                        color: #FFD36A;
+                    }
+                </style>
+
+                <h2 class="titulo-desen">Desenvolvedores</h2>
+
+                <div class="unico">
+
+                    <h2><a href="https://github.com/bebea-240">Ana</a></h2>
+                    <ul>
+                        <h3>
+                            <li>Sprites</li>
+                        </h3>
+                    </ul>
+
+                </div>
+                <div class="unico">
+                    <h2><a href="https://github.com/jackelinedepaulanascimento">Jackeline</a></h2>
+                    <ul>
+                        <h3>
+                            <li>Site</li>
+                            <li>Sons</li>
+                            <li>Música</li>
+
+                        </h3>
+                    </ul>
+                </div>
+                <div class="unico">
+                    <h2><a href="https://github.com/MouraLays">Lays</a></h2>
+                    <ul>
+                        <h3>
+                            <li>Documentação</li>
+                            
+                        </h3>
+                    </ul>
+
+                </div>
+                <div class="unico">
+                    <h2><a href="https://github.com/Mari-610">Marina</a></h2>
+                    <ul>
+                        <h3>
+                            <li>Storyboard</li>
+                            <li>Cenários</li>
+                            <li>Sprites</li>
+                            <li>Código</li>
+                        </h3>
+                    </ul>
+                </div>
+                <div class="unico">
+                    <h2><a href="https://github.com/MichaelAlvex">Michael</a></h2>
+                    <h3>
+                        <li>Código</li>
+                    </h3>
+                </div>
+            </section>
+            <footer>
+                <section>
+                    <p>Caso tenha alguma duvida á repeito do código<a
+                            href="https://github.com/MichaelAlvex/TecnoBound-Repositorio">clique aqui.</a></p>
+                </section>
+            </footer>
+            <script>
+                const slides = document.querySelector("#slides");
+                const imagens = document.querySelectorAll("#slides img");
+                const bolinhas = document.querySelectorAll(".bolinha");
+                const totalSlides = bolinhas.length;
+
+                let slideAtual = 0;
+                let temporizador;
+
+                function mostrarSlide(indice) {
+                    slideAtual = (indice + totalSlides) % totalSlides;
+                    imagens.forEach((img, i) => {
+                        img.classList.toggle("ativa", i === slideAtual);
+                    });
+                    bolinhas.forEach((bolinha, i) => {
+                        bolinha.classList.toggle("ativa", i === slideAtual);
+                    });
+                }
+
+                function mudarSlide(direcao) {
+                    mostrarSlide(slideAtual + direcao);
+                    reiniciarAutomatico();
+                }
+
+                function irParaSlide(indice) {
+                    mostrarSlide(indice);
+                    reiniciarAutomatico();
+                }
+
+                function iniciarAutomatico() {
+                    temporizador = setInterval(() => {
+                        mostrarSlide(slideAtual + 1);
+                    }, 2000);
+                }
+
+                function reiniciarAutomatico() {
+                    clearInterval(temporizador);
+                    iniciarAutomatico();
+                }
+
+                iniciarAutomatico();
+            </script>
+</body>
+
+</html>
