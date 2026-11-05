@@ -387,7 +387,7 @@
     }
 
     .rodape .caixa-fim {
-        flex: 1 1 250px;
+        flex: 1 1 0;
         min-width: 0;
         box-sizing: border-box;
         text-align: center;
@@ -523,6 +523,7 @@
         margin-bottom: -20px;
         margin-top: 10px;
     }
+
     .cod {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -533,20 +534,19 @@
         margin: 20px auto;
         align-items: start;
     }
-    
+
     .cod div {
         display: flex;
         justify-content: center;
         align-items: flex-start;
     }
-    
+
     .cod img {
         width: 90%;
         height: auto;
         object-fit: contain;
         display: block;
     }
-
 </style>
 
 <body>
@@ -596,13 +596,17 @@
             <h2>Cenários</h2>
             <div class="janela">
                 <div class="slides" id="slides">
+                    <img src="img7.jpeg">
+                    <img src="img8.jpeg">
+                    <img src="img9.jpeg">
+                    <img src="img10.jpeg">
+                    <img src="img11.jpeg">
+                    <img src="img12.jpeg">
                     <img src="img1.jpeg">
                     <img src="img2.jpeg">
                     <img src="img3.jpeg">
                     <img src="img4.jpeg">
                     <img src="img5.jpeg">
-                    <img src="img6.jpeg">
-                    <img src="img">
                     <img src="img6.jpeg">
                 </div>
                 <button class="seta anterior" onclick="mudarSlide(-1)" aria-label="Imagem anterior">
@@ -620,7 +624,10 @@
                 <button class="bolinha" onclick="irParaSlide(5)" aria-label="img6"></button>
                 <button class="bolinha" onclick="irParaSlide(6)" aria-label="img7"></button>
                 <button class="bolinha" onclick="irParaSlide(7)" aria-label="img8"></button>
-
+                <button class="bolinha" onclick="irParaSlide(7)" aria-label="img9"></button>
+                <button class="bolinha" onclick="irParaSlide(7)" aria-label="img10"></button>
+                <button class="bolinha" onclick="irParaSlide(7)" aria-label="img11"></button>
+                <button class="bolinha" onclick="irParaSlide(7)" aria-label="img12"></button>
             </div>
         </section>
         <h3>Divididos por biomas e níveis de dificudade, estão aqui alguns dos cenários que você
@@ -667,7 +674,7 @@
             <section class="trailer">
                 <div class="janela">
                     <video controls>
-                        <source src="#" type="video/mp4">
+                        <source src="WhatsApp Video 2026-11-05 at 01.17.34.mp4" type="video/mp4">
                         Seu navegador não consegue reproduzir este vídeo.
                     </video>
                 </div>
@@ -683,23 +690,23 @@
             </style>
             <section id="código">
                 <h2>Trechos do código</h2>
-            <div class="cod">
-                <div>
-                    <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
+                <div class="cod">
+                    <div>
+                        <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
+                    </div>
+
+                    <div>
+                        <img src="cod2.jpeg" alt="Trecho de código 2" title="Nickentree">
+                    </div>
+
+                    <div>
+                        <img src="cod3.jpeg" alt="Trecho de código 3" title="Inventario">
+                    </div>
+
+                    <div>
+                        <img src="cod4.jpeg" alt="Trecho de código 4" title="Caixa de receitas">
+                    </div>
                 </div>
-            
-                <div>
-                    <img src="cod2.jpeg" alt="Trecho de código 2" title="Nickentree">
-                </div>
-            
-                <div>
-                    <img src="cod3.jpeg" alt="Trecho de código 3" title="Inventario">
-                </div>
-            
-                <div>
-                    <img src="cod4.jpeg" alt="Trecho de código 4" title="Caixa de receitas">
-                </div>
-            </div>
                 <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.</p>
             </section>
             <div class="rodape">
@@ -707,17 +714,16 @@
                     <h2>Documentação</h2>
 
                     <nav class="bxr">
-                        <a href="DOCUMENTACAOOFICIALDOJOGO.odt">Baixar Documentação</a>
+                        <a href="DOCUMENTAÇÃOTECHNOBOUND.odt">Baixar Documentação</a>
                     </nav>
                 </section>
                 <section id="down" class="caixa-fim">
 
                     <h2>Download</h2>
 
-                    <nav class="links-fim">
+                    <nav >
 
-                        <a href="DOCUMENTACAOOFICIALDOJOGO.odt">Baixar para Windows</a>
-                        <a href="DOCUMENTACAOOFICIALDOJOGO.odt">Baixar para Linux</a>
+                        <a href="TecnoBound_Instalador.exe">Baixar para Windows</a>
 
                     </nav>
                 </section>
@@ -758,7 +764,7 @@
                     <ul>
                         <h3>
                             <li>Documentação</li>
-                            
+
                         </h3>
                     </ul>
 
