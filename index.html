@@ -131,6 +131,11 @@
         border-radius: 10px;
     }
 
+    . .desenvolvedores>p {
+        font-size: small;
+        color: whitesmoke;
+    }
+
     .desenvolvedores .card {
         flex: 1 1 150px;
         max-width: 220px;
@@ -144,7 +149,7 @@
         align-items: center;
         justify-content: flex-start;
         flex: 1 1 150px;
-        max-width: 180px;
+        max-width: 250px;
         margin: 0;
         padding: 20px;
         gap: 10px;
@@ -551,21 +556,58 @@
 
 <body>
     <header>
-        <h1>Technobound</h1>
+        <h1>TechnoBound</h1>
         <h2>A caverna tecnológica</h2>
     </header>
     <nav>
+        <a href="#his">História</a>
+        <a href="#trailer">Trailer</a>
         <a href="#sobre">Sobre</a>
         <a href="#obj">Objetivo</a>
         <a href="#cen">Cenários</a>
         <a href="#boss">Boss</a>
         <a href="#avatar">Avatar</a>
-        <a href="#trailer">Trailer</a>
         <a href="#código">Código</a>
         <a href="#down">Download</a>
         <a href="#doc">Documentação</a>
+        <a href="#sto">Storyboard</a>
         <a href="#desen">Desenvolvedores</a>
     </nav>
+    <section id="his">
+        <h2>História</h2>
+        <p>Em um momento muito distante, durante as grandes explorações de carvão e minerais, Everbound foi um grande
+            centro de exploração de minérios.
+            Porém, não havia um controle sobre essa exploração, que acontecia de maneira danosa à caverna que, com o
+            tempo, buscando se proteger, criou métodos de autopreservação para afastar aqueles que a faziam mal. Então,
+            em dado momento ela se cansou e procurou maneiras de se ver livre, passando a modificar sua estrutura. E
+            toda sua raiva e tristeza fizeram com que criaturas do mal se formassem em seu interior.</p>
+        <p>
+            Por muito tempo ela permaneceu inexplorada, o que gerou a formação de camadas de gelo ao seu redor e o
+            crescimento de comunidades de criaturas do mal se desenvolvendo dentro dela.
+            Certo dia, a jovem Ada, desenvolvedora e engenheira protetora da natureza resolveu seguir seu sonho de
+            iniciar seu próprio negócio de montagem de computadores, porém, na região onde vivia havia poucos recursos,
+            já que a única fonte existente era a montanha de Everbound.</p>
+        <p>
+            Então, reunindo toda sua coragem e amor à natureza, Ada resolveu seguir seu sonho e enfrentar os perigos
+            para reativá-la, mostrando que é possível utilizar e produzir tecnologia de maneira sustentável e
+            respeitosa. Mas ela não pode fazer isso sozinha, ela precisa da sua ajuda para enfrentar os inimigos e
+            realizar seu sonho de finalmente provar que é possível reunir tecnologia, sustentabilidade e combate às
+            forças do mal. Embarque nessa missão com TechnoBound!</p>
+    </section>
+    <br>
+    <section class="blz" id="trailer">
+        <h2>Trailer</h2>
+        <section class="trailer">
+            <div class="janela">
+                <video controls>
+                    <source src="WhatsApp Video 2026-11-05 at 01.17.34.mp4" type="video/mp4">
+                    Seu navegador não consegue reproduzir este vídeo.
+                </video>
+            </div>
+            <p>Dê play e assista a um pequeno trailer de como as coisas funcionam dentro da caverna TechnoBound.</p>
+        </section>
+    </section>
+
     <div class="org-box">
         <section id="sobre">
             <h2>Sobre</h2>
@@ -584,8 +626,8 @@
         <section id="obj">
             <h2>Objetivo</h2>
             <p>
-                O seu objetivo dentro da caverna Technobound, será minerar tudo o que for necessário para a formação da
-                melhor peça de hardware que você conseguir entregar. Tenho certeza que com a dedicação necessária o seu
+                O seu objetivo dentro da caverna TechnoBound será minerar tudo o que for necessário para a formação da
+                melhor peça de hardware que você conseguir entregar. Tenho certeza de que com a dedicação necessária o seu
                 setup será o melhor!
 
         </section>
@@ -597,17 +639,14 @@
             <div class="janela">
                 <div class="slides" id="slides">
                     <img src="img7.jpeg">
-                    <img src="img8.jpeg">
                     <img src="img9.jpeg">
-                    <img src="img10.jpeg">
-                    <img src="img11.jpeg">
-                    <img src="img12.jpeg">
                     <img src="img1.jpeg">
-                    <img src="img2.jpeg">
                     <img src="img3.jpeg">
-                    <img src="img4.jpeg">
-                    <img src="img5.jpeg">
                     <img src="img6.jpeg">
+                    <img src="img10.jpeg">
+                    <img src="img12.jpeg">
+                    <img src="img8 (2).jpeg">
+                    <img src="fim.jpeg">
                 </div>
                 <button class="seta anterior" onclick="mudarSlide(-1)" aria-label="Imagem anterior">
                     < </button>
@@ -625,13 +664,10 @@
                 <button class="bolinha" onclick="irParaSlide(6)" aria-label="img7"></button>
                 <button class="bolinha" onclick="irParaSlide(7)" aria-label="img8"></button>
                 <button class="bolinha" onclick="irParaSlide(8)" aria-label="img9"></button>
-                <button class="bolinha" onclick="irParaSlide(9)" aria-label="img10"></button>
-                <button class="bolinha" onclick="irParaSlide(10)" aria-label="img11"></button>
-                <button class="bolinha" onclick="irParaSlide(11)" aria-label="img12"></button>
             </div>
         </section>
-        <h3>Divididos por biomas e níveis de dificuldade, estão aqui alguns dos cenários que você
-            encontrará nessa aventura.</h3>
+        <p>Divididos por biomas e níveis de dificuldade, estão aqui alguns dos cenários que você
+            encontrará nessa aventura.</p>
 
     </section>
     </div>
@@ -668,27 +704,37 @@
             <p>Essa é a Ada, o avatar que vai te representar durante a sua jornada dentro da caverna TechnoBound.
             </p>
         </section>
-
-        <section class="blz" id="trailer">
-            <h2>Trailer</h2>
-            <section class="trailer">
-                <div class="janela">
-                    <video controls>
-                        <source src="WhatsApp Video 2026-11-05 at 01.17.34.mp4" type="video/mp4">
-                        Seu navegador não consegue reproduzir este vídeo.
-                    </video>
-                </div>
-                <p>Dê play e assista á um pequeno trailer de como as coisas funcionam dentro da caverna TechnoBound.</p>
-            </section>
-        </section>
-
         <section class="carrossel" id="cen">
             <style>
                 section {
                     background: transparent;
                 }
+
+                .desenvolvedores .unico h4 {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                    min-height: 2.4em;
+                }
             </style>
             <section id="código">
+                <style>
+                    .cod img:hover {
+                        position: fixed;
+                        width: 90vw;
+                        height: 90vh;
+                        object-fit: contain;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 9999;
+                        background: #190D2B;
+                    }
+
+                    .cod img {
+                        transition: transform 0.3s ease;
+                    }
+                </style>
                 <h2>Trechos do código</h2>
                 <div class="cod">
                     <div>
@@ -714,17 +760,23 @@
                     <h2>Documentação</h2>
 
                     <nav class="bxr">
-                        <a href="DOCUMENTAÇÃOTECHNOBOUND.odt">Baixar Documentação</a>
+                        <a href="DOCUMENTAÇÃOTECHNOBOUND.odt">Baixar Documentação.</a>
                     </nav>
                 </section>
                 <section id="down" class="caixa-fim">
 
                     <h2>Download</h2>
 
-                    <nav >
+                    <nav>
 
-                        <a href="TecnoBound_Instalador.exe">Baixar para Windows</a>
+                        <a href="TecnoBound_Instalador.exe">Baixar para Windows.</a>
 
+                    </nav>
+                </section>
+                <section id="sto">
+                    <h2>Storyboard</h2>
+                    <nav>
+                        <a href="Storyboard_Technobound.pdf">Acesso ao storyboard do TechnoBound.</a>
                     </nav>
                 </section>
             </div>
@@ -734,63 +786,81 @@
                     h2 a {
                         color: #FFD36A;
                     }
+
+                    p {
+                        font-size: small;
+                    }
+
+                    .desenvolvedores .unico>p {
+                        margin-top: 0;
+                    }
+
+                    .foto {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
                 </style>
 
                 <h2 class="titulo-desen">Desenvolvedores</h2>
 
                 <div class="unico">
-
+                    <img src="ana.jpeg" class="foto">
                     <h2><a href="https://github.com/bebea-240">Ana</a></h2>
-                    <ul>
-                        <h3>
-                            <li>Sprites</li>
-                        </h3>
-                    </ul>
+
+                    <h4>Designer de sprites</h4>
+                    <p>
+                        Cuidou do processo criativo dentro da parte das sprites, garantindo maior harmonia
+                        estética.
+                    </p>
 
                 </div>
                 <div class="unico">
+                    <img src="eu.jpeg" class="foto">
                     <h2><a href="https://github.com/jackelinedepaulanascimento">Jackeline</a></h2>
-                    <ul>
-                        <h3>
-                            <li>Site</li>
-                            <li>Sons</li>
-                            <li>Música</li>
 
-                        </h3>
-                    </ul>
+                    <h4>Desenvolvedora do site e do som</h3>
+                        <p>Cuidou do desenvolvimento do site e da produção sonora, garantindo uma
+                            experiência fluida e maior coesão do projeto.</p>
+
                 </div>
                 <div class="unico">
+                    <img src="ana.jpeg" class="foto">
                     <h2><a href="https://github.com/MouraLays">Lays</a></h2>
-                    <ul>
-                        <h3>
-                            <li>Documentação</li>
 
-                        </h3>
-                    </ul>
-
+                    <h4>Documentadora do projeto</h3>
+                        <p>Responsável pela Documentação do projeto, garantindo clareza e organização das
+                            informações do projeto.</p>
                 </div>
                 <div class="unico">
+                    <img src="mari.jpeg" class="foto">
                     <h2><a href="https://github.com/Mari-610">Marina</a></h2>
-                    <ul>
-                        <h3>
-                            <li>Storyboard</li>
-                            <li>Cenários</li>
-                            <li>Sprites</li>
-                            <li>Código</li>
-                        </h3>
-                    </ul>
+
+                    <h4>Desenvolvedora do código e telas do jogo</h3>
+                        <p>Cuidou da maior parte artística, estando responsável por 90% dos cenários, 20% das sprites e
+                            teve participação nos códigos. </p>
                 </div>
                 <div class="unico">
+                    <img src="ana.jpeg" class="foto">
                     <h2><a href="https://github.com/MichaelAlvex">Michael</a></h2>
-                    <h3>
-                        <li>Código</li>
-                    </h3>
+
+                    <h4>Progamador geral</h3>
+                        <p>Responsável pela maior parte da programação do jogo, cuidando do desenvolvimento e
+                            mecânica geral.</p>
                 </div>
             </section>
             <footer>
+                <style>
+                    h3 {
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                </style>
                 <section>
-                    <p>Caso tenha alguma dúvida a repeito do código<a
-                            href="https://github.com/MichaelAlvex/TecnoBound-Repositorio">clique aqui.</a></p>
+                    <h3>© Copyright TechnoBound's Code</h3>
+                    <p>Caso tenha alguma dúvida a respeito do código,<a
+                            href="https://github.com/MichaelAlvex/TecnoBound-Repositorio">clique aqui.</a>e seja
+                        redirecionado ao GitHub que armazena todos eles.</p>
                 </section>
             </footer>
             <script>
@@ -832,7 +902,7 @@
                     clearInterval(temporizador);
                     iniciarAutomatico();
                 }
-
+                mostrarSlide(0);
                 iniciarAutomatico();
             </script>
 </body>
