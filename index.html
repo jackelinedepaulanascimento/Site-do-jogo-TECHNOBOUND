@@ -567,6 +567,7 @@
         <a href="#cen">Cenários</a>
         <a href="#boss">Boss</a>
         <a href="#avatar">Avatar</a>
+        <a href="#fase">Fases</a>
         <a href="#código">Código</a>
         <a href="#down">Download</a>
         <a href="#doc">Documentação</a>
@@ -627,7 +628,8 @@
             <h2>Objetivo</h2>
             <p>
                 O seu objetivo dentro da caverna TechnoBound será minerar tudo o que for necessário para a formação da
-                melhor peça de hardware que você conseguir entregar. Tenho certeza de que com a dedicação necessária o seu
+                melhor peça de hardware que você conseguir entregar. Tenho certeza de que com a dedicação necessária o
+                seu
                 setup será o melhor!
 
         </section>
@@ -717,6 +719,47 @@
                     min-height: 2.4em;
                 }
             </style>
+            <style>
+                .obj {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
+                }
+
+                .obj h2 {
+                    grid-column: 1 / -1;
+                }
+
+                @media (max-width: 700px) {
+                    .obj {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+            <section class="obj" id="fase">
+                <h2>Objetivo de cada fase</h2>
+                <section>
+                    <h3>Fase 1</h3>
+                    <p>Atender aos pedidos de periféricos, construindo um mouse, teclado ou monitor de acordo com a
+                        encomenda escolhida.
+                        Observe a dificuldade de cada pedido antes de escolher. Cada encomenda pode exigir uma
+                        quantidade ou variedade diferente de materiais.</p>
+                </section>
+                <section>
+                    <h3>Fase 2</h3>
+                    <p>Construir componentes internos de um computador, como placa-mãe, placa de vídeo ou
+                        processador.
+                        Fique atento aos metais necessários para cada encomenda. A coleta dos materiais é essencial
+                        para conseguir fabricar todas as peças.</p>
+                </section>
+                <section>
+                    <h3>Fase 3</h3>
+                    <p>Montar setups completos destinados a diferentes finalidades, como uso residencial, escritório
+                        ou jogos.
+                        Pense na finalidade do setup solicitado: cada tipo de montagem possui necessidades
+                        específicas.</p>
+                </section>
+            </section>
             <section id="código">
                 <style>
                     .cod img:hover {
@@ -735,6 +778,7 @@
                         transition: transform 0.3s ease;
                     }
                 </style>
+
                 <h2>Trechos do código</h2>
                 <div class="cod">
                     <div>
@@ -862,7 +906,7 @@
                     <p>Caso tenha alguma dúvida a respeito do código,<a
                             href="https://github.com/MichaelAlvex/TecnoBound-Repositorio">clique aqui.</a>e seja
                         redirecionado ao GitHub que armazena todos eles.</p>
-                    </section>
+                </section>
             </footer>
             <script>
                 const slides = document.querySelector("#slides");
