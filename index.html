@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -223,6 +224,11 @@
         min-width: 250px;
         margin-top: 50px;
         box-sizing: border-box;
+    }
+
+    .org-box>.fase-full {
+        grid-column: 1 / -1;
+        min-width: 0;
     }
 
     .doc a {
@@ -479,7 +485,7 @@
     .boss img {
         height: auto;
         width: 100%;
-        max-width: 120px;
+        max-width: 250px;
         aspect-ratio: 1/1;
         object-fit: contain;
     }
@@ -503,9 +509,10 @@
     .avatar img {
         height: auto;
         width: 100%;
-        max-width: 120px;
+        max-width: 170px;
         aspect-ratio: 1/1;
         object-fit: contain;
+        padding: 0;
     }
 
     .blz {
@@ -567,6 +574,8 @@
         <a href="#cen">Cenários</a>
         <a href="#boss">Boss</a>
         <a href="#avatar">Avatar</a>
+        <a href="#Bossinhos">Bossinhos</a>
+        <a href="#Hardware">Hardwares</a>
         <a href="#fase">Fases</a>
         <a href="#código">Código</a>
         <a href="#down">Download</a>
@@ -635,6 +644,70 @@
         </section>
     </div>
     <br>
+    <section class="obj" id="fase">
+        <h2>Objetivo de cada fase</h2>
+        <section>
+            <h3>Fase 1</h3>
+            <p>Atender aos pedidos de periféricos, construindo um mouse, teclado ou monitor de acordo com a
+                encomenda escolhida.
+                Observe a dificuldade de cada pedido antes de escolher. Cada encomenda pode exigir uma
+                quantidade ou variedade diferente de materiais.</p>
+        </section>
+        <section>
+            <h3>Fase 2</h3>
+            <p>Construir componentes internos de um computador, como placa-mãe, placa de vídeo ou
+                processador.
+                Fique atento aos metais necessários para cada encomenda. A coleta dos materiais é essencial
+                para conseguir fabricar todas as peças.</p>
+        </section>
+        <section>
+            <h3>Fase 3</h3>
+            <p>Montar setups completos destinados a diferentes finalidades, como uso residencial, escritório
+                ou jogos.
+                Pense na finalidade do setup solicitado: cada tipo de montagem possui necessidades
+                específicas.</p>
+        </section>
+    </section>
+    <section id="código">
+        <style>
+            .cod img:hover {
+                position: fixed;
+                width: 90vw;
+                height: 90vh;
+                object-fit: contain;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+                background: #190D2B;
+            }
+
+            .cod img {
+                transition: transform 0.3s ease;
+            }
+        </style>
+
+        <h2>Trechos do código</h2>
+        <div class="cod">
+            <div>
+                <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
+            </div>
+
+            <div>
+                <img src="cod2.jpeg" alt="Trecho de código 2" title="Nickentree">
+            </div>
+
+            <div>
+                <img src="cod3.jpeg" alt="Trecho de código 3" title="Inventario">
+            </div>
+
+            <div>
+                <img src="cod4.jpeg" alt="Trecho de código 4" title="Caixa de receitas">
+            </div>
+        </div>
+        <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.
+        </p>
+    </section>
     <section>
         <section class="carrossel" id="cen">
             <h2>Cenários</h2>
@@ -706,6 +779,94 @@
             <p>Essa é a Ada, o avatar que vai te representar durante a sua jornada dentro da caverna TechnoBound.
             </p>
         </section>
+        <section>
+            <h2>Bossinhos</h2>
+            <style>
+                .bossinho {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 30px;
+                    width: 100%;
+                }
+
+                .bossinho .nome {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    width: 180px;
+                }
+
+                .bossinho .nome img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: contain;
+                }
+
+                .bossinho .nome div {
+                    margin-top: 10px;
+
+                }
+
+                @media (max-width: 480px) {
+                    .bossinho {
+                        gap: 10px;
+                    }
+
+                    .bossinho .nome {
+                        width: 30%;
+                    }
+
+                    .bossinho .nome img {
+                        width: 100%;
+                        height: 110px;
+                    }
+                }
+            </style>
+            <section id="Bossinhos">
+                <div class="bossinho">
+
+                    <div class="nome">
+                        <img src="bixo1.png">
+                        <div>Aranha</div>
+                    </div>
+                    <div class="nome">
+                        <img src="bixo2.png">
+                        <div>Slime</div>
+                    </div>
+                    <div class="nome">
+                        <img src="bixo3.png">
+                        <div>Morcego</div>
+                    </div>
+                </div>
+            </section>
+            <p>Esses são os menores inimigos que você vai encontrar, mas não deixe que isso te engane. Eles podem ser
+                tão fortes quanto fofos.</p>
+        </section>
+        <section id="Hardwares">
+            <h2>Hardwares</h2>
+            <section>
+                <div class="bossinho">
+
+                    <div class="nome">
+                        <img src="hard1.png">
+                        <div>Computador gamer</div>
+                    </div>
+                    <div class="nome">
+                        <img src="hard2.png">
+                        <div>Placa de video</div>
+                    </div>
+                    <div class="nome">
+                        <img src="hard3.png">
+                        <div>Mouse</div>
+                    </div>
+                </div>
+            </section>
+            <p>Esses e muitos outros, serão alguns dos seus desafios, montar hardwares parece fácil ate você dar de cara
+                com os seus riscos.</p>
+        </section>
         <section class="carrossel" id="cen">
             <style>
                 section {
@@ -718,8 +879,7 @@
                     line-height: 1.2;
                     min-height: 2.4em;
                 }
-            </style>
-            <style>
+
                 .obj {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -730,75 +890,16 @@
                     grid-column: 1 / -1;
                 }
 
-                @media (max-width: 700px) {
-                    .obj {
-                        grid-template-columns: 1fr;
-                    }
+                .obj h3 {
+                    color: #FFD36A;
+                    font-size: large;
+                    font-family: Arial, Helvetica, sans-serif;
                 }
             </style>
-            <section class="obj" id="fase">
-                <h2>Objetivo de cada fase</h2>
-                <section>
-                    <h3>Fase 1</h3>
-                    <p>Atender aos pedidos de periféricos, construindo um mouse, teclado ou monitor de acordo com a
-                        encomenda escolhida.
-                        Observe a dificuldade de cada pedido antes de escolher. Cada encomenda pode exigir uma
-                        quantidade ou variedade diferente de materiais.</p>
-                </section>
-                <section>
-                    <h3>Fase 2</h3>
-                    <p>Construir componentes internos de um computador, como placa-mãe, placa de vídeo ou
-                        processador.
-                        Fique atento aos metais necessários para cada encomenda. A coleta dos materiais é essencial
-                        para conseguir fabricar todas as peças.</p>
-                </section>
-                <section>
-                    <h3>Fase 3</h3>
-                    <p>Montar setups completos destinados a diferentes finalidades, como uso residencial, escritório
-                        ou jogos.
-                        Pense na finalidade do setup solicitado: cada tipo de montagem possui necessidades
-                        específicas.</p>
-                </section>
-            </section>
-            <section id="código">
-                <style>
-                    .cod img:hover {
-                        position: fixed;
-                        width: 90vw;
-                        height: 90vh;
-                        object-fit: contain;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 9999;
-                        background: #190D2B;
-                    }
+            </style>
+            </style>
 
-                    .cod img {
-                        transition: transform 0.3s ease;
-                    }
-                </style>
 
-                <h2>Trechos do código</h2>
-                <div class="cod">
-                    <div>
-                        <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
-                    </div>
-
-                    <div>
-                        <img src="cod2.jpeg" alt="Trecho de código 2" title="Nickentree">
-                    </div>
-
-                    <div>
-                        <img src="cod3.jpeg" alt="Trecho de código 3" title="Inventario">
-                    </div>
-
-                    <div>
-                        <img src="cod4.jpeg" alt="Trecho de código 4" title="Caixa de receitas">
-                    </div>
-                </div>
-                <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.</p>
-            </section>
             <div class="rodape">
                 <section id="doc" class="fim">
                     <h2>Documentação</h2>
@@ -808,12 +909,16 @@
                     </nav>
                 </section>
                 <section id="down" class="caixa-fim">
-
+                    <style>
+                         nav a {
+                            color:#dfbd70;
+                        }
+                    </style>
                     <h2>Download</h2>
 
                     <nav>
 
-                        <a href="TecnoBound_Instalador.exe">Baixar para Windows.</a>
+                        <a href="TecnoBound_Baixar.exe">Baixar para Windows.</a>
 
                     </nav>
                 </section>
@@ -870,7 +975,7 @@
 
                 </div>
                 <div class="unico">
-                    <img src="ana.jpeg" class="foto">
+                    <img src="lala.jpeg" class="foto">
                     <h2><a href="https://github.com/MouraLays">Lays</a></h2>
 
                     <h4>Documentadora do projeto</h3>
@@ -882,11 +987,12 @@
                     <h2><a href="https://github.com/Mari-610">Marina</a></h2>
 
                     <h4>Desenvolvedora do código e telas do jogo</h3>
-                        <p>Cuidou da maior parte artística, estando responsável por 90% dos cenários, 20% das sprites e
+                        <p>Cuidou da maior parte artística, estando responsável por 90% dos cenários, 20% das
+                            sprites e
                             teve participação nos códigos. </p>
                 </div>
                 <div class="unico">
-                    <img src="ana.jpeg" class="foto">
+                    <img src="mich.jpeg" class="foto">
                     <h2><a href="https://github.com/MichaelAlvex">Michael</a></h2>
 
                     <h4>Progamador geral</h3>
@@ -951,5 +1057,4 @@
                 iniciarAutomatico();
             </script>
 </body>
-
 </html>
