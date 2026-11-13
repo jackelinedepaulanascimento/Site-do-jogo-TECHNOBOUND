@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -23,6 +22,40 @@
         background-attachment: fixed;
     }
 
+    body p {
+        font-size: medium;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+    }
+
+    .desenvolvedores p {
+        font-size: medium;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: medium;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .cod p {
+        font-size: medium;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    .blz p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 180px;
+    }
 
     nav {
         display: flex;
@@ -47,8 +80,6 @@
 
         border: 2px solid #C94B16;
         border-radius: 10px;
-
-
     }
 
 
@@ -132,7 +163,7 @@
         border-radius: 10px;
     }
 
-    . .desenvolvedores>p {
+    .desenvolvedores>p {
         font-size: small;
         color: whitesmoke;
     }
@@ -461,13 +492,31 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
+        max-width: 1000px;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .trailer p{
+        font-size: medium;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .cen p{
+        font-size: medium;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
     }
 
     .trailer {
-        border: none;
         background: transparent;
         box-shadow: none;
     }
@@ -496,6 +545,18 @@
         overflow-wrap: anywhere;
     }
 
+    .boss img:hover {
+        position: fixed;
+        width: 50vw;
+        height: 50vh;
+        object-fit: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        z-index: 9999;
+        background: #C94B16;
+    }
+
     .mãe {
         display: flex;
         flex-wrap: wrap;
@@ -513,6 +574,18 @@
         aspect-ratio: 1/1;
         object-fit: contain;
         padding: 0;
+    }
+
+    .avatar img:hover {
+        position: fixed;
+        width: 40vw;
+        height: 50vh;
+        object-fit: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        z-index: 9999;
+        background: #C94B16;
     }
 
     .blz {
@@ -536,15 +609,17 @@
         margin-top: 10px;
     }
 
+    
+
     .cod {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 10px;
+        grid-template-rows: auto;
         row-gap: 10px;
         width: 90%;
         max-width: 1400px;
-        margin: 20px auto;
+        margin: 5px auto;
         align-items: start;
+        justify-items: center;
     }
 
     .cod div {
@@ -559,6 +634,11 @@
         object-fit: contain;
         display: block;
     }
+
+    .cod img .mah {
+        width: 3000px;
+        height: 400px;
+    }
 </style>
 
 <body>
@@ -567,20 +647,11 @@
         <h2>A caverna tecnológica</h2>
     </header>
     <nav>
-        <a href="#his">História</a>
-        <a href="#trailer">Trailer</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#obj">Objetivo</a>
-        <a href="#cen">Cenários</a>
-        <a href="#boss">Boss</a>
-        <a href="#avatar">Avatar</a>
-        <a href="#Bossinhos">Bossinhos</a>
+        <a href="#his">Jornada</a>
+        <a href="#boss">Elementos visuais</a>
         <a href="#Hardware">Hardwares</a>
-        <a href="#fase">Fases</a>
-        <a href="#código">Código</a>
-        <a href="#down">Download</a>
-        <a href="#doc">Documentação</a>
-        <a href="#sto">Storyboard</a>
+        <a href="#código">Códigos</a>
+        <a href="#down">Recursos do Projeto</a>
         <a href="#desen">Desenvolvedores</a>
     </nav>
     <section id="his">
@@ -605,17 +676,16 @@
             forças do mal. Embarque nessa missão com TechnoBound!</p>
     </section>
     <br>
-    <section class="blz" id="trailer">
+    <section class="trailer">
         <h2>Trailer</h2>
-        <section class="trailer">
+
             <div class="janela">
                 <video controls>
                     <source src="trailer.mp4" type="video/mp4">
                     Seu navegador não consegue reproduzir este vídeo.
                 </video>
             </div>
-            <p>Dê play e assista a um pequeno trailer de como as coisas funcionam dentro da caverna TechnoBound.</p>
-        </section>
+        <p>Dê play e assista a um pequeno trailer de como as coisas funcionam dentro da caverna TechnoBound.</p>
     </section>
 
     <div class="org-box">
@@ -668,85 +738,6 @@
                 específicas.</p>
         </section>
     </section>
-    <section id="código">
-        <style>
-            .cod img:hover {
-                position: fixed;
-                width: 90vw;
-                height: 90vh;
-                object-fit: contain;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 9999;
-                background: #190D2B;
-            }
-
-            .cod img {
-                transition: transform 0.3s ease;
-            }
-        </style>
-
-        <h2>Trechos do código</h2>
-        <div class="cod">
-            <div>
-                <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
-            </div>
-
-            <div>
-                <img src="cod2.jpeg" alt="Trecho de código 2" title="Nickentree">
-            </div>
-
-            <div>
-                <img src="cod3.jpeg" alt="Trecho de código 3" title="Inventario">
-            </div>
-
-            <div>
-                <img src="cod4.jpeg" alt="Trecho de código 4" title="Caixa de receitas">
-            </div>
-        </div>
-        <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.
-        </p>
-    </section>
-    <section>
-        <section class="carrossel" id="cen">
-            <h2>Cenários</h2>
-            <div class="janela">
-                <div class="slides" id="slides">
-                    <img src="img7.jpeg">
-                    <img src="img9.jpeg">
-                    <img src="img1.jpeg">
-                    <img src="img3.jpeg">
-                    <img src="img6.jpeg">
-                    <img src="img10.jpeg">
-                    <img src="img12.jpeg">
-                    <img src="img8 (2).jpeg">
-                    <img src="fim.jpeg">
-                </div>
-                <button class="seta anterior" onclick="mudarSlide(-1)" aria-label="Imagem anterior">
-                    < </button>
-                        <button class="seta proxima" onclick="mudarSlide(1)" aria-label="Próxima imagem">
-                            >
-                        </button>
-            </div>
-            <div class="bolinhas">
-                <button class="bolinha ativa" onclick="irParaSlide(0)" aria-label="img1"></button>
-                <button class="bolinha" onclick="irParaSlide(1)" aria-label="img2"></button>
-                <button class="bolinha" onclick="irParaSlide(2)" aria-label="img3"></button>
-                <button class="bolinha" onclick="irParaSlide(3)" aria-label="img4"></button>
-                <button class="bolinha" onclick="irParaSlide(4)" aria-label="img5"></button>
-                <button class="bolinha" onclick="irParaSlide(5)" aria-label="img6"></button>
-                <button class="bolinha" onclick="irParaSlide(6)" aria-label="img7"></button>
-                <button class="bolinha" onclick="irParaSlide(7)" aria-label="img8"></button>
-                <button class="bolinha" onclick="irParaSlide(8)" aria-label="img9"></button>
-            </div>
-        </section>
-        <p>Divididos por biomas e níveis de dificuldade, estão aqui alguns dos cenários que você
-            encontrará nessa aventura.</p>
-
-    </section>
-    </div>
-
     <div class="org-box">
         <section id="boss">
             <h2>Bosses</h2>
@@ -780,7 +771,7 @@
             </p>
         </section>
         <section>
-            <h2>Bossinhos</h2>
+            <h2>Inimigos</h2>
             <style>
                 .bossinho {
                     display: flex;
@@ -808,6 +799,18 @@
                 .bossinho .nome div {
                     margin-top: 10px;
 
+                }
+
+                .bossinho img:hover {
+                    position: fixed;
+                    width: 50vw;
+                    height: 50vh;
+                    object-fit: contain;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1.2);
+                    z-index: 9999;
+                    background: #C94B16;
                 }
 
                 @media (max-width: 480px) {
@@ -849,24 +852,106 @@
             <h2>Hardwares</h2>
             <section>
                 <div class="bossinho">
-
                     <div class="nome">
-                        <img src="hard1.png">
-                        <div>Computador gamer</div>
+                        <img src="hard3.png">
+                        <div>Mouse</div>
                     </div>
+
                     <div class="nome">
                         <img src="hard2.png">
                         <div>Placa de video</div>
                     </div>
+
                     <div class="nome">
-                        <img src="hard3.png">
-                        <div>Mouse</div>
+                        <img src="hard1.png">
+                        <div>Computador gamer</div>
                     </div>
                 </div>
             </section>
             <p>Esses e muitos outros, serão alguns dos seus desafios, montar hardwares parece fácil ate você dar de cara
                 com os seus riscos.</p>
         </section>
+    </div>
+    <br>
+    <section>
+        <h2>Tablet</h2>
+        <section class="trailer">
+            <div class="janela">
+                <video controls>
+                    <source src="tablet.mp4" type="video/mp4">
+                    Seu navegador não consegue reproduzir este vídeo.
+                </video>
+            </div>
+            <p>Esse é o tablet que você encontrará no jogo e suas funções.</p>
+            </section>
+    </section>
+    <section>
+        <section class="carrossel" id="cen">
+            <h2>Cenários</h2>
+            <div class="janela">
+                <div class="slides" id="slides">
+                    <img src="img7.jpeg">
+                    <img src="novo.p.jpeg">
+                    <img src="img1.jpeg">
+                    <img src="img3.jpeg">
+                    <img src="img6.jpeg">
+                    <img src="cav.jpeg">
+                    <img src="img12.jpeg">
+                    <img src="img8 (2).jpeg">
+                    <img src="fim.jpeg">
+                </div>
+                <button class="seta anterior" onclick="mudarSlide(-1)" aria-label="Imagem anterior">
+                    < </button>
+                        <button class="seta proxima" onclick="mudarSlide(1)" aria-label="Próxima imagem">
+                            >
+                        </button>
+            </div>
+            <div class="bolinhas">
+                <button class="bolinha ativa" onclick="irParaSlide(0)" aria-label="img1"></button>
+                <button class="bolinha" onclick="irParaSlide(1)" aria-label="img2"></button>
+                <button class="bolinha" onclick="irParaSlide(2)" aria-label="img3"></button>
+                <button class="bolinha" onclick="irParaSlide(3)" aria-label="img4"></button>
+                <button class="bolinha" onclick="irParaSlide(4)" aria-label="img5"></button>
+                <button class="bolinha" onclick="irParaSlide(5)" aria-label="img6"></button>
+                <button class="bolinha" onclick="irParaSlide(6)" aria-label="img7"></button>
+                <button class="bolinha" onclick="irParaSlide(7)" aria-label="img8"></button>
+                <button class="bolinha" onclick="irParaSlide(8)" aria-label="img9"></button>
+            </div>
+        </section>
+        <p>Divididos por biomas e níveis de dificuldade, estão aqui alguns dos cenários que você
+            encontrará nessa aventura.</p>
+
+    </section>
+    </div>
+
+    <section id="código">
+        <style>
+            .cod img {
+                transition: transform 0.3s ease;
+            }
+        </style>
+
+        <h2>Trechos do código</h2>
+        <div class="cod">
+            <div>
+                <img src="cod1.jpeg" alt="Trecho de código 1" title="Geração de cavernas">
+            </div>
+            <div>
+                <p>Geração de caverna</p>
+            </div>
+            <div class="mah">
+                <img src="codm.jpeg" alt="Trecho de código 2" title="Montagem">
+            </div>
+            <div>
+                <p>Montagem</p>
+            </div>
+        </div>
+        <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.
+        </p>
+    </section>
+
+    <div class="org-box">
+
         <section class="carrossel" id="cen">
             <style>
                 section {
@@ -895,40 +980,88 @@
                     font-size: large;
                     font-family: Arial, Helvetica, sans-serif;
                 }
-            </style>
-            </style>
-            </style>
 
-
+                .cen p {
+                    font-size: medium;
+                    font-weight: bolder;
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-align: center;
+                }
+            </style>
             <div class="rodape">
+                <style>
+                    .filha img {
+                        height: 470px;
+                        width: 350px;
+                        min-width: 100%;
+                    }
+                </style>
                 <section id="doc" class="fim">
                     <h2>Documentação</h2>
 
+
+                    <div class="mãe">
+                        <div class="filha">
+                            <img src="ata0.png">
+                            <p>Essa foi a primeira reunião que a nossa equipe fez.</p>
+                        </div>
+                        <div class="filha">
+                            <img src="ata1.png">
+                            <p>Essa foi uma das ultimas reuniões que a nossa equipe fez.</p>
+                        </div>
+                        <div class="filha">
+                            <img src="pedidos.png">
+                            <p>Esse foi o primeiro protótipo da tela de pedidos.</p>
+                        </div>
+                        <div class="filha">
+                            <img src="pedidos2.png">
+                            <p>Esse foi o resutado final.</p>
+                        </div>
+                    </div>
                     <nav class="bxr">
                         <a href="DOCUMENTAÇÃOTECHNOBOUND.odt">Baixar Documentação.</a>
                     </nav>
                 </section>
-                <section id="down" class="caixa-fim">
-                    <style>
-                         nav a {
-                            color:#dfbd70;
-                        }
-                    </style>
-                    <h2>Download</h2>
 
-                    <nav>
-
-                        <a href="TecnoBound_Baixar.exe">Baixar para Windows.</a>
-
-                    </nav>
-                </section>
                 <section id="sto">
                     <h2>Storyboard</h2>
+                    <div class="mãe">
+                        <div class="filha"><img src="sto1.jpeg">
+                            <p></p>
+                        </div>
+                        <div></div>
+                        <div class="filha"><img src="sto2.jpeg">
+                            <p></p>
+                        </div>
+                        <div></div>
+                        <div class="filha"><img src="sto3.jpeg">
+                            <p></p>
+                        </div>
+                        <div></div>
+                        <div class="filha"><img src="sto4.jpeg">
+                            <p></p>
+                        </div>
+                        <div></div>
+                    </div>
                     <nav>
                         <a href="Storyboard_Technobound.pdf">Acesso ao storyboard do TechnoBound.</a>
                     </nav>
                 </section>
             </div>
+
+            <section id="down" class="caixa-fim">
+                <style>
+                    nav a {
+                        color: #dfbd70;
+                    }
+                </style>
+                <h2>Download</h2>
+                <nav>
+                    <a href="TecnoBound_Baixar.exe">Baixar para Windows.</a>
+                </nav>
+            </section>
+
+
 
             <section class="desenvolvedores" id="desen">
                 <style>
@@ -950,6 +1083,8 @@
                         border-radius: 50%;
                         object-fit: cover;
                     }
+
+                    .unico h4 {}
                 </style>
 
                 <h2 class="titulo-desen">Desenvolvedores</h2>
@@ -1057,4 +1192,5 @@
                 iniciarAutomatico();
             </script>
 </body>
+
 </html>
