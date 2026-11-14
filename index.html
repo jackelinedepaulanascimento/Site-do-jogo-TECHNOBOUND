@@ -426,27 +426,31 @@
 
     .rodape {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 20px;
         width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
 
     }
-    .rodape .filha, 
-.rodape > #doc, 
-.rodape > #sto {
-    flex: 1; /* Divide o espaço 50/50 na horizontal */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra os botões/links para o rodapé da caixa */
-    min-width: 0;
-    box-sizing: border-box;
-}
+
+    .rodape .filha,
     .rodape>#doc,
     .rodape>#sto {
-        flex: 1 1 0;
-        width: 50%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .rodape>#doc,
+    .rodape>#sto {
+        flex: 1 1 400px;
+        width: auto;
         min-width: 0;
         box-sizing: border-box;
     }
@@ -461,11 +465,11 @@
     }
 
     .rodape .filha {
-        flex:0 0 auto;
+        flex: 1 1 180px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: auto;
         min-width: 0;
         box-sizing: border-box;
     }
@@ -474,14 +478,38 @@
         display: block;
         width: 100%;
         max-width: 100%;
-        height:clamp(200px, 25vw, 320px);
+        height: clamp(200px, 25vw, 320px);
         object-fit: contain;
+    }
+    @media(max-width:768px){
+        .rodape{
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .rodape>#doc,.rodape>#sto{
+            width: 100%;
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+        .rodape .mãe{
+            flex-direction: row;
+            flex-direction: wrap;
+            justify-content: center;
+            align-items:stretch;
+        }
+        .rodape .filha{
+            flex: 1 1 180px;
+            max-width: 100%;
+        }
+        .rodape .filha img{
+            height: 250px;
+        }
     }
 
     @media (max-width: 600px) {
         .rodape .mãe {
-        flex-direction: column;
-    }
+            flex-direction: column;
+        }
     }
 
     .rodape .caixa-fim {
@@ -788,7 +816,7 @@
 
         <div class="janela">
             <video controls>
-                <source src="trailer.mp4" type="video/mp4">
+                <source src="TechnoboundVideo.mp4" type="video/mp4">
                 Seu navegador não consegue reproduzir este vídeo.
             </video>
         </div>
@@ -1004,7 +1032,7 @@
     <br>
     <section>
         <style>
-            .trailer .janela p{
+            .trailer .janela p {
                 font-size: large;
             }
         </style>
@@ -1371,7 +1399,7 @@ ds_grid_destroy(_Grade);
     }
 }  
                 </code></pre>
-                
+
             </div>
         </div>
         <p>Aqui estão pequenos trechos de alguns dos códigos que foram usados no desenvolvimento deste jogo.
@@ -1397,10 +1425,26 @@ ds_grid_destroy(_Grade);
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     gap: 20px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    overflow-wrap: break-word;
+                }
+
+                .obj>section {
+                    min-width: 0;
+                    width: 100%;
+                    box-sizing: border-box;
+                    overflow-wrap: break-word;
                 }
 
                 .obj h2 {
                     grid-column: 1 / -1;
+                }
+
+                @media (max-width: 768px) {
+                    .obj {
+                        grid-template-columns: 1fr;
+                    }
                 }
 
                 .obj h3 {
@@ -1418,13 +1462,6 @@ ds_grid_destroy(_Grade);
                 }
             </style>
             <div class="rodape">
-                <style>
-                    .filha img {
-                        height: 470px;
-                        width: 350px;
-                        min-width: 100%;
-                    }
-                </style>
                 <section id="doc" class="fim">
                     <h2>Documentação</h2>
 
@@ -1432,19 +1469,19 @@ ds_grid_destroy(_Grade);
                     <div class="mãe">
                         <div class="filha">
                             <img src="ata0.png">
-                        <br>
+                            <br>
                             <p>Essa foi a primeira reunião que a nossa equipe fez.</p>
                         </div>
                         <div class="filha">
                             <img src="ata2.png">
                             <p>Essa foi a ultima reunião que a nossa equipe fez.</p>
-                        <br>
+                            <br>
                         </div>
                         <div class="filha">
                             <img src="pedidos.png">
                             <p>Esse foi o primeiro protótipo da tela de pedidos.</p>
-                        <br>
-                        <br>
+                            <br>
+                            <br>
 
                         </div>
                         <div class="filha">
@@ -1482,7 +1519,7 @@ ds_grid_destroy(_Grade);
                             <img src="sto3.jpeg">
                         </div>
                         <div>
-                           <p>Fabricação das peças</p>
+                            <p>Fabricação das peças</p>
                         </div>
                         <div class="filha">
                             <img src="sto4.jpeg">
@@ -1511,7 +1548,7 @@ ds_grid_destroy(_Grade);
                 </style>
                 <h2>Download</h2>
                 <nav>
-                    <a href="TecnoBound_Baixar.exe">Baixar para Windows.</a>
+                    <a href="TecnoBound.exe">Baixar para Windows.</a>
                 </nav>
             </section>
 
