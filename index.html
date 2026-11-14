@@ -425,8 +425,8 @@
     }
 
     .rodape {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: stretch;
         gap: 30px;
         width: 100%;
@@ -460,49 +460,37 @@
         align-items: center;
         gap: 20px;
         width: 100%;
-        min-width: 0;
-        flex-wrap: wrap;
     }
 
     .rodape .filha {
-        flex: 1 1 180px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: auto;
-        min-width: 0;
+        width: 100%;
+        max-width: 350px;
+        align-items: center;
         box-sizing: border-box;
     }
 
     .rodape .filha img {
-        display: block;
         width: 100%;
-        max-width: 100%;
-        height: clamp(200px, 25vw, 320px);
+        height: auto;
         object-fit: contain;
     }
-    @media(max-width:768px){
-        .rodape{
+
+    @media(max-width:768px) {
+        .rodape {
+            grid-template-columns: 1fr;
+        }
+
+        .rodape .mãe {
             flex-direction: column;
-            align-items: stretch;
+            align-items: center;
         }
-        .rodape>#doc,.rodape>#sto{
+
+        .rodape .filha {
             width: 100%;
-            flex: 1 1 100%;
-            max-width: 100%;
-        }
-        .rodape .mãe{
-            flex-direction: row;
-            flex-direction: wrap;
-            justify-content: center;
-            align-items:stretch;
-        }
-        .rodape .filha{
-            flex: 1 1 180px;
-            max-width: 100%;
-        }
-        .rodape .filha img{
-            height: 250px;
+            max-width: 350px;
         }
     }
 
